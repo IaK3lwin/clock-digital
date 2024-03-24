@@ -2,17 +2,19 @@ const horas = document.getElementById("horas");
 const minutos = document.getElementById("minutos");
 const segundos = document.getElementById("segundos");
 
-const relogio = setInterval(function time(){
-    
-    let dateToday = new Date();
-    let hr = dateToday.getHours();
-    let min = dateToday.getMinutes();
-    let seg = dateToday.getSeconds();
+const relogio = setInterval(function time()
+{
+    let date = new Date();
+    let h = date.getHours();
+    let m = date.getMinutes();
+    let s = date.getSeconds();
 
-    if (hr < 10) hr = "0" + hr
-    if (min < 10) min = "0" + min
-    if (seg < 10) seg = "0" + seg
-    horas.textContent = hr;
-    minutos.textContent = min;
-    segundos.textContent = eg;
-})
+    if (h < 10) h = "0" + h;
+    if (m < 10) m = "0" + m;
+    if (s < 10) s = "0" + s;
+
+    minutos.textContent = m;
+    segundos.textContent = s;
+    horas.textContent = h;
+    
+});
